@@ -1,65 +1,119 @@
+import Link from "next/link";
 import Image from "next/image";
+import { ArrowRight } from "lucide-react";
+import ProjectCard from "@/components/ProjectCard";
+import { projects } from "@/data/projects";
+
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <>
+      {/* ── Hero ── */}
+      <section className="pt-32 pb-16 px-6" aria-labelledby="hero-heading">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-[1fr_220px] lg:grid-cols-[1fr_260px] gap-10 md:gap-16 items-end">
+
+            {/* Venstre: tekst */}
+            <div>
+              <p
+                className="text-[0.7rem] text-muted uppercase tracking-[0.15em] mb-10 motion-safe:animate-fade-up"
+                style={{ animationDelay: "0ms" }}
+              >
+                Designer · Oslo
+              </p>
+
+              <h1
+                id="hero-heading"
+                className="font-display leading-[0.88] tracking-tight mb-8 motion-safe:animate-fade-up"
+                style={{ fontSize: "clamp(3.5rem, 9vw, 7.5rem)", animationDelay: "60ms" }}
+              >
+                Helene
+                <br />
+                Huseby<span className="text-accent">.</span>
+              </h1>
+
+              <p
+                className="text-muted leading-relaxed mb-10 motion-safe:animate-fade-up"
+                style={{ fontSize: "clamp(1rem, 1.3vw, 1.1rem)", maxWidth: "40ch", animationDelay: "120ms" }}
+              >
+                Jobber med UX, tjenestedesign og systemdesign. Av og til
+                noe grafisk når det trengs.
+              </p>
+
+              <div
+                className="flex flex-wrap gap-3 motion-safe:animate-fade-up"
+                style={{ animationDelay: "180ms" }}
+              >
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 bg-fg text-bg px-6 py-3 rounded-full text-sm font-semibold cursor-pointer hover:bg-accent transition-colors duration-200 focus-visible:rounded-full"
+                >
+                  Si hei
+                  <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Høyre: foto */}
+            <div
+              className="hidden md:block motion-safe:animate-fade-up"
+              style={{ animationDelay: "240ms" }}
+              aria-hidden="true"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+              <div className="w-full aspect-[3/4] rounded-2xl overflow-hidden">
+                <Image
+                  src="/helene-huseby.jpg"
+                  alt="Portrettfoto av Helene Huseby"
+                  width={520}
+                  height={693}
+                  className="w-full h-full object-cover object-top"
+                  priority
+                />
+              </div>
+            </div>
+
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* ── Utvalgt arbeid ── */}
+      <section className="py-16 px-6" aria-labelledby="featured-heading">
+        <div className="max-w-6xl mx-auto">
+
+          <div className="flex items-baseline mb-2">
+            <div className="flex items-center gap-2">
+              <div className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" aria-hidden="true" />
+              <p className="text-[0.7rem] text-muted uppercase tracking-[0.15em]">Utvalgt arbeid</p>
+            </div>
+          </div>
+
+          <h2 id="featured-heading" className="font-display text-2xl mb-10">Prosjekter<span className="text-accent">.</span></h2>
+
+          <div className="divide-y divide-border border-t border-border">
+            {projects.map((project, i) => (
+              <ProjectCard key={project.slug} project={project} index={i} />
+            ))}
+          </div>
+
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* ── Kontakt-strip ── */}
+      <section className="py-14 px-6 bg-surface border-t border-border" aria-labelledby="cta-heading">
+        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+          <div>
+            <h2 id="cta-heading" className="font-display text-xl mb-1">Åpen for nye muligheter<span className="text-accent">.</span></h2>
+            <p className="text-sm text-muted">Si gjerne hei om du har noe på hjertet.</p>
+          </div>
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-2 bg-fg text-bg px-6 py-3 rounded-full text-sm font-semibold cursor-pointer hover:bg-accent transition-colors duration-200 focus-visible:rounded-full flex-shrink-0"
+          >
+            Ta kontakt
+            <ArrowRight className="w-4 h-4" aria-hidden="true" />
+          </Link>
+        </div>
+      </section>
+    </>
   );
 }
