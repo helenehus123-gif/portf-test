@@ -233,7 +233,7 @@ export const projects: Project[] = [
     role: "UX Designer",
     tools: ["Figma", "Qyreli"],
     color: "#D6EAE7",
-    heroImage: "/images/DEV/hero.png",
+    heroImage: "/images/dev/hero.png",
     caseStudy: {
       labels: {
         challenge: "Oppdraget",
@@ -247,7 +247,7 @@ export const projects: Project[] = [
       challengeImages: {
         items: [
           {
-            src: "/images/DEV/velkommen-live.png",
+            src: "/images/dev/velkommen-live.png",
             alt: "Digital eksamensvakt i nettleseren, velkomstskjerm med personvernbeskjed og meldingspanel åpent",
             caption: "Det ferdige produktet, live i nettleseren. Personvernbeskjeden er første ting studenten møter.",
           },
@@ -259,12 +259,12 @@ export const projects: Project[] = [
         display: "carousel",
         items: [
           {
-            src: "/images/DEV/demoeksamen.png",
+            src: "/images/dev/demoeksamen.png",
             alt: "Testeksamen-siden i LMS med boks for å starte og boks som viser gjennomført status",
             caption: "Testeksamen som designgrep: gjennomfør det en gang før det teller.",
           },
           {
-            src: "/images/DEV/skjermdeling-osq.png",
+            src: "/images/dev/skjermdeling-osq.png",
             alt: "Skjermdelings-steget med ofte stilte spørsmål åpnet, Macbook og Chrome, flere skjermer, omstart av nettleser",
             caption: "Alle spørsmålene studentene ikke hadde stilt ennå, besvart på forhånd.",
           },
@@ -276,22 +276,22 @@ export const projects: Project[] = [
         display: "carousel",
         items: [
           {
-            src: "/images/DEV/skjermdeling-aktiv.png",
+            src: "/images/dev/skjermdeling-aktiv.png",
             alt: "Skjermdeling aktivert med live preview som viser at eksamen-vinduet deles, og bekreftelsescheckbox",
             caption: "Live preview bekrefter at riktig skjerm deles. Ingen gjetting.",
           },
           {
-            src: "/images/DEV/kamera-aktiv.png",
+            src: "/images/dev/kamera-aktiv.png",
             alt: "Kamera og mikrofon aktivert med live bilde av studenten og lydmåler som viser at utstyr fungerer",
             caption: "Du ser deg selv. Du hører deg selv. Systemet bekrefter, du bekrefter.",
           },
           {
-            src: "/images/DEV/avslutt-dialog.png",
+            src: "/images/dev/avslutt-dialog.png",
             alt: "Tre varianter av forsiden med avslutt eksamen-dialog og ulike tilstander",
             caption: "Hva skjer om du vil avbryte? Det designet vi for også.",
           },
           {
-            src: "/images/DEV/eksamen-overvaking.png",
+            src: "/images/dev/eksamen-overvaking.png",
             alt: "Skisse av admin-grensesnittet for gjennomgang av flaggede klipp etter eksamen",
             caption: "Skisse av baksiden, hvordan eksamensansvarlig ser og vurderer flaggede klipp.",
           },
@@ -302,7 +302,7 @@ export const projects: Project[] = [
       resultsImages: {
         items: [
           {
-            src: "/images/DEV/levert.png",
+            src: "/images/dev/levert.png",
             alt: "Levert-skjermen etter eksamen med bekreftelse på at all overvåkning er stoppet umiddelbart",
             caption: "Levert. All overvåkning stoppet umiddelbart. Data slettes automatisk.",
           },
